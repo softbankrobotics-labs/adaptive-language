@@ -1,0 +1,8 @@
+topic: ~confirmation()
+# Defining extra concepts out of words or group of words
+concept:(yes) [yes yeah indeed yep affirmative "good enough" definitely "{for} sure" alright "why not" ok okay certainly "very well" absolutely right exactly precisely perfect correct "of course"]
+concept:(no) ["{definitely absolutely} [no not]" nope "no way" never negative negatory "don't want" "not at all"]
+
+proposal:%VALIDATION Do you want me to speak in English?
+    u1:(~yes) %YES ^gotoInTopic(START,welcome)
+    u1:(~no) Ok ^endDiscuss(end)

@@ -1,0 +1,8 @@
+topic: ~confirmation()
+# Defining extra concepts out of words or group of words
+concept:(yes) [yes はい]
+concept:(no) [no いいえ]
+
+proposal:%VALIDATION 日本語を話して欲しいですか？
+    u1:(~yes) %YES ^gotoInTopic(START,welcome)
+    u1:(~no) ^endDiscuss(end)

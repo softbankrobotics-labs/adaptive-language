@@ -1,0 +1,10 @@
+topic: ~confirmation()
+# Defining extra concepts out of words or group of words
+concept:(yes) [yes Ja]
+concept:(no) [no nicht]
+
+# Replying to speech
+
+proposal:%VALIDATION Soll ich auf Deutsch sprechen?
+    u1:(~yes) %YES ^gotoInTopic(START,welcome)
+    u1:(~no) Ok ^endDiscuss(end)

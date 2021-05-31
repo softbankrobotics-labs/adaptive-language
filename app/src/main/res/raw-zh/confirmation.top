@@ -1,0 +1,8 @@
+topic: ~confirmation()
+
+concept:(yes) [yes 是的]
+concept:(no) [no 非]
+
+proposal:%VALIDATION 你要我说中文吗？
+    u1:(~yes) %YES ^gotoInTopic(START,welcome)
+    u1:(~no) Ok ^endDiscuss(end)

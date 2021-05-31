@@ -1,0 +1,8 @@
+topic: ~confirmation()
+concept:(yes) [yes si "claro que si"]
+concept:(no) [no]
+
+# Replying to speech
+proposal:%VALIDATION Quiere que hablo en espanol?
+    u1:(~yes) %YES ^gotoInTopic(START,welcome)
+    u1:(~no) Ok ^endDiscuss(end)

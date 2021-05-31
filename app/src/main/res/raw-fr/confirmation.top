@@ -1,0 +1,8 @@
+topic: ~confirmation()
+# Defining extra concepts out of words or group of words
+concept:(yes) [yes oui "en effet" effectivement yep]
+concept:(no) [no non nope "pas du tout"]
+
+proposal:%VALIDATION Vous voulez que je parle en Français?
+    u1:(~yes) %YES ^gotoInTopic(START,welcome)
+    u1:(~no) Ok ^endDiscuss(end)
